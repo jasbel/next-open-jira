@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 import Head from "next/head";
 import React, { FC, PropsWithChildren } from "react";
 import { Navbar } from "../ui";
+import { Sidebar } from "../ui/Sidebar";
 
 interface Props extends PropsWithChildren {
   title?: string;
@@ -16,7 +17,7 @@ export const Layout: FC<Props> = ({ title = "Open Jira", children }) => {
       </Head>
 
       <Navbar />
-      {/* Sidebar */}
+      <Sidebar />
 
       <Box sx={{ p: "10px 15px" }}>{children}</Box>
     </Box>
